@@ -1,0 +1,30 @@
+<button onclick="_(__.value)" style="width: 30%; float: right; color: #36095f; background-color: #461c6f; font-size: 10">●</button>
+<button onclick="_(__)" style="width: 30%; float: right; color: #36095f; background-color: #461c6f; font-size: 10">○</button>
+<input id="__" style="width: 30%; float: right; color: #36095f; background-color: #461c6f; font-size: 10">
+<center style="background-color: black; height: 100%">
+    <div id="A" style="float: left; width: 30%; color: red; background-color: white;"></div>
+    <div id="B" style="float: left; width: 30%; color: green; background-color: white;"></div>
+    <div id="C" style="float: left; width: 30%; color: blue; background-color: white;"></div>
+</center>
+<script>
+function a(I) {
+  let _ = "I*I"
+  for (let i=50; i<I; i++) {_ += '\n'+i*i}
+  return _
+}
+function b(I) {
+  let _ = "I"
+  for (let i=50; i<I; i++) {_ += '\n'+i}
+  return _
+}
+function c(I) {
+  let _ = "I*(I-1)"
+  for (let i=50; i<I; i++) {_ += '\n'+i*(i-1)}
+  return _
+}
+function _(I) {
+A.innerText=a(I)
+B.innerText=b(I)
+C.innerText=c(I)
+}
+</script>
